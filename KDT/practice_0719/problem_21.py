@@ -29,3 +29,26 @@ for i in range(digit_num):
     num //= 10
 
 print(new_num)
+
+
+'''
+1. 문자열
+print(str(number[::-1]))
+
+2.
+number =123
+result = 0
+while number:
+    #이전 결과에 10을 곱하고
+    result *= 10
+    # 나머지를 더해주고
+    result += number %10
+    # number를 깍는다.
+    number //=10
+
+print(result)
+
+
+
+
+'''
