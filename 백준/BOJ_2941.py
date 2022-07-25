@@ -15,3 +15,11 @@ while n <= len(S)-1:
         cnt += 1
         n += 1
 print(cnt)
+
+'''
+# replace 함수를 이용하여, croatian_alpha에 있는 것들을 한 글자로 바꿔 길이를 출력함.
+word = input()
+for i in croatian_alpha :
+    word = word.replace(i, '*')  # input 변수와 동일한 이름의 변수
+print(len(word))
+'''

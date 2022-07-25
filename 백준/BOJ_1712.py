@@ -3,7 +3,7 @@ A, B, C = map(int, input().split())
 # A + (B - C) * N = 0
 # N = A/(C-B)
 
-if B > C:
+if B >= C:
     print(-1)
 else:
     print(int(A/(C-B))+1)

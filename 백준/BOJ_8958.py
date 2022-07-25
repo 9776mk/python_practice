@@ -26,5 +26,3 @@ for test_case in range(T):
                 sum_tmp = 0
                 o_list = []
     print(sum_num)
-
-# [OO, O, OOO] -> 글자수만큼 더하면 된다.

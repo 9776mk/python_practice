@@ -10,6 +10,3 @@ for i in range(len(S)):
 
 for i in alphabet_dict:
     print(alphabet_dict[i], end=' ')
-
-
-# print(alphabet_dict)

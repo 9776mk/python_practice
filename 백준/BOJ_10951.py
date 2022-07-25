@@ -1,4 +1,6 @@
 while True:
-    a, b = map(int, input().split())
-    print(a + b)
-    break
+    try:
+        a, b = map(int, input().split())
+        print(a + b)
+    except:
+        break
