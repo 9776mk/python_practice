@@ -33,15 +33,26 @@ for char in S:
 print(sum)
 
 '''
-3. https://ooyoung.tistory.com/73
-alpabet_list = ['ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ'] # 알파벳 묶음들을 만듦
-word = input() # 입력 받음
-time = 0 # 걸리는 시간 저장
+# 알파벳 묶음을 만듦
+dial_list = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+# 걸리는 시간 : 3      4      5      6      7      8       9      10
 
-for unit in alpabet_list : # alphabet 전체 리스트 꺼냄 
-    for i in unit:  # alpabet 리스트에서 각 요소를 꺼내서 한글자씩 분리
-        for x in word :  # 입력받은 문자를 하나씩 분리
-            if i == x :  # 두 알파벳이 같으면
-                time += alpabet_list.index(unit) +3  # time = time + index +3
-print(time)
+# 사용자로부터 입력
+words = input()
+
+# 총 걸리는 시간 선언
+time_ = 0
+
+# dial_list에 있는 알파벳들을
+for alphabet in dial_list:
+    # 한 글자씩 분리하고
+    for j in alphabet:
+        # words 단어를 한 글자씩 분리해서
+        for k in words:
+            # 만약 두 글자가 같으면
+            if j == k:
+                # dial_list의 인덱스 값 + 3을 time_변수에 더한다.
+                time_ += dial_list.index(alphabet) + 3
+
+print(time_)
 '''

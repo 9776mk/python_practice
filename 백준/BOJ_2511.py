@@ -1,14 +1,10 @@
 list_A = list(map(int, input().split()))
 list_B = list(map(int, input().split()))
 
-sum_A = 0
-sum_B = 0
+sum_A, sum_B = 0, 0
 
-Awin_index = 0
-Bwin_index = 0
-
-
-
+Awin_index, Bwin_index = 0, 0
+ 
 for i in range(10):
     if list_A[i] > list_B[i]:
         sum_A += 3
