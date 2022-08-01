@@ -1,47 +1,22 @@
-# # # 교과서 수 N, 교과서 더미의 수 M
-# N, M = map(int, input().split())
+import sys
+# 빠른 입력
+input = sys.stdin.readline
 
-# ki_list = []
+# 교과서 수 N, 교과수 더미 수 M
+N, M = map(int, input().split())
+stack_ = []
+is_possible = True
 
-# num_list = list(range(1,N+1))
+for i in range(M):
+    ki = int(input())
+    stack_.append(list(map(int, input().split())))
 
-# # # 2차원 list로 입력받기
-# # # [[3, 1], [4, 2]]
-# for _ in range(M):
-#     ki = int(input())
-#     ki_list.append(list(map(int, input().split())))
+for i in range(M):
+    for j in range(len(stack_[i]) - 1):
+        if stack_[i][j] < stack_[i][j + 1]:
+            is_possible = False
 
-# # print(ki_list)
-# N = int(input())
-
-# # idx_list = list(range(1,N+1))
-
-# # print(idx_list)
-
-# # pop값의 크기 비교
-# # for i in range(M):
-
-
-
-
-# n,m = map(int, input().split())
-
-# list_2 = []
-
-# for i in range(m):
-#     a = int(input())
-#     list_number = list(map(int,input().split()))
-
-#     for j in range(0,len(list_number)-1):
-#         if list_number[j] < list_number[j+1]:
-#             list_2.append(list_number[j+1])
-        
-            
-# if list_2 == []:
-#     print('Yes')
-# else:
-#     print('No')
-
-num_list = list(range(1,10))
-
-print(num_list)
+if is_possible:
+    print('Yes')
+else:
+    print('No')
