@@ -1,17 +1,8 @@
 # 우유 가게 수 N 입력
-#N = int(input())
-N = 7
+N = int(input())
 
 # 우유 가게 정보 입력
-#store_ = list(map(int, input().split()))
-# store_ = [0, 1, 2, 0, 1, 2, 0] # cnt = 7
-# store_ = [0, 0, 0, 0, 0, 0, 0] # cnt = 1
-# store_ = [0, 0, 1, 1, 2, 2, 0] # cnt = 4
-# store_ = [2,2,1,1,0,0,1] # cnt = 2
-# store_ = [0,0,0,0,0,0,1] # cnt = 2
-# store_ = [2,2,2,2,2,2,2] # cnt = 0
-store_ = [2,1,2,1,0,2,1] 
-
+store_ = list(map(int, input().split()))
 
 cnt = 0
 tmp = 0
