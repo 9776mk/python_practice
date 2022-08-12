@@ -20,3 +20,27 @@ max_list.sort()
 
 for elem in max_list:
     print(elem, end='')
+
+
+'''
+dict_ = {}
+
+while True:
+    try:
+        input_ = input()
+        input_.replace(' ', '')
+
+        for alphabet in input_:         
+            dict_[alphabet] = dict_.get(alphabet, 0) + 1
+
+    except:
+        break
+
+# 파이썬 딕셔너리 정렬
+sorted_dict = sorted(dict.times(), key=lambda x: (-x[1], x[0]))
+print(sorted_dict)
+for char, count in sorted_dict:
+
+    if max_ == count:
+        print(char)
+'''

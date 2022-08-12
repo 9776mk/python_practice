@@ -16,3 +16,28 @@ while True:
         break
     else:
         N = str(int(N) - 1)
+
+
+
+'''
+N = int(input())
+
+max_ = 4
+
+for number in range(N+1):
+    string_number = str(number)
+
+    for char_number in string_number:
+        #print(string_number, char_number)
+
+        if not (char_number == '4' or char_number == '7'):
+            break
+
+        # for ~ else ~
+        # for 이 정상적으로 다 완료되면 else가 실행된다.
+
+    else:
+        max_ = int(string_number)
+
+print(max_)
+'''
