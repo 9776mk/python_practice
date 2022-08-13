@@ -13,6 +13,6 @@ for test_case in range(1,T+1):
         new_m = m1 + m2
 
     if new_h > 12:
-        new_h %= 12
+        new_h -= 12
 
     print(f'#{test_case} {new_h} {new_m}')

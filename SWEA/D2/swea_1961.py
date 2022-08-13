@@ -1,6 +1,5 @@
 from pprint import pprint
 
-
 T = int(input())
 
 for test_case in range(1,T+1):
@@ -56,23 +55,7 @@ for test_case in range(1,T+1):
         k = ' '.join(map(str, result_[i]))
         print(k)
 
-#print(result_)
-
-
-
-
 
 # # 2. 한 번씩 실행한 후 계속해서 추가 - for문 활용, 결과 리스트 하나만 있으면 됨
 # # 함수 3번 돌리고, 그 리스트들을 행별로 추가.
 # result_ = [[0] * 3 for _ in range(n)]
-
-
-
-
-
-
-
-
-
-# print(rotate_(n_list))
-

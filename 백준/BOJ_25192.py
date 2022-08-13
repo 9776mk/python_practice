@@ -47,8 +47,6 @@ for log in log_list:
         set_.add(log)
         gom += 1
 
-
-
 '''
 
 
