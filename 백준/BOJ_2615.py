@@ -10,7 +10,8 @@ for _ in range(N):
     field.append(list(map(int, input().split())))
 #pprint(field) 
 
-# field = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+# field = [
+# [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 #  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 #  [0, 1, 2, 0, 0, 2, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 #  [0, 0, 1, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -59,10 +60,11 @@ for x in range(N):
                 nx = x + dx[i]
                 ny = y + dy[i]
 
-                while is_found != True:
+                while True:
                 # 새로운 nx, ny가 범위를 벗어나지 않고, 색깔이 같으면 cnt +1 하고 같은 방향으로 계속 진행
                     if -1 < nx < N and -1 < ny < N and field[x][y] == field[nx][ny]:
                         stone_cnt += 1
+                        #print(stone_cnt)
                         nx = nx + dx[i]
                         ny = ny + dy[i]
                         
@@ -72,21 +74,22 @@ for x in range(N):
                         if stone_cnt == 5:
                             # 6목 검사를 해서 6목이 아닌 경우 x, y 를 출력
                             # 6목 검사는 시작한 x,y에서 -델타 탐색 방향과 5목에 해당 되는 곳에서 한 번 더 델타 탐색
+                                # 델타 탐색을 한 후 조건을 만족하면 break 문으로 빠져 나가면 되므로 한 번 더 델타 탐색은 하지 않아도 됨
                             nx_0, ny_0 = x - dx[i], y - dy[i]
-                            nx_6, ny_6 = nx + dx[i], ny + dy[i]
-                            print(nx_0, ny_0)
-                            print(nx_6, ny_6)
+                            #print(nx_0, ny_0)
 
-                            # 둘다 바둑판 범위를 벗어나지 않아야 함
-                            if -1 < nx_0 < N and -1 < ny_0 < N and -1 < nx_6 < N and -1 < ny_6 < N:
-                                if field[nx_0][ny_0] != field[x][y] and field[nx_6][ny_6] != field[x][y]:
-                                    print(field[x][y])
-                                    print(x+1, y+1)
-                                    is_found = True
-                            else:
+                            # nx_0, ny_0가 바둑판을 벗어났거나 색깔이 다르다면 5목
+                            if not(-1 < nx_0 < N and -1 < ny_0 < N ) or field[nx_0][ny_0] != field[x][y]:
+                                print(field[x][y])
+                                print(x+1, y+1)
+                                is_found = True
                                 break
+                    # 범위를 벗어나거나 색깔이 다른 경우 새로운 델타 탐색        
                     else:
                         break
+                    
         if is_found:
             break
-    
+
+if is_found == False:
+    print(0)
