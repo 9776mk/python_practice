@@ -13,7 +13,6 @@
 #         if boong < 0:
 #             result = "Impossible"
 #             break
-
 #     print(f'{tc} {result}')
 
 

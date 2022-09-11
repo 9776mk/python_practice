@@ -2,12 +2,10 @@ T = 10
 
 for tc in range(1, T+1):
     a, b = map(str, input().split())
-    print(a,b)
 
     stack_ = []
 
     for i in b:
-        print(i)
         
         if stack_:
             if int(stack_[-1]) == int(i):
@@ -17,4 +15,7 @@ for tc in range(1, T+1):
         else:
             stack_.append(i)
     
-    print(stack_)
+    print(f'#{tc}', end=" ")
+    for i in stack_:
+        print(int(i), end="")
+    print()
