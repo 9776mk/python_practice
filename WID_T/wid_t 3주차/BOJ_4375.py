@@ -14,9 +14,12 @@
 #             multiple = multiple + '1'
 
 while True:
-    multiple = '1'
-    n = int(input())
+    try:
+        n = int(input())
+    except:
+        break
 
+    multiple = '1'
     while True:
         if int(multiple) % n == 0:
             print(len(multiple))
