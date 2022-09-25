@@ -1,23 +1,12 @@
-N = int(input())
-list_ = []
+import sys
 
-for i in range(N):
-    list_.append(int(input()))
+n = int(sys.stdin.readline())
+num_list = [0] * 10001
 
-count = [0] * (max(list_) + 1)
+for _ in range(n):
+    num_list[int(sys.stdin.readline())] += 1
 
-for num in list_:
-    count[num] += 1
-    
-for i in range(1, len(count)):
-    count[i] += count[i-1]
-
-result = [0] * (len(list_))
-
-for num in list_:
-    idx = count[num]
-    result[idx - 1] = num
-    count[num] -= 1
-
-for i in result:
-    print(i)
+for i in range(10001):
+    if num_list[i] != 0:
+        for j in range(num_list[i]):
+            print(i)
