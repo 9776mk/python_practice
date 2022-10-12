@@ -8,7 +8,7 @@ def pprint(n):
 # bfs 정의
 def bfs(a, b):
     queue.append((a,b))
-
+    # 참고 visited[a][b]를 0으로 바꿔서 다시 방문 안 해도 되는 방법이 있음! 
     while queue:
         x, y = queue.popleft()
         visited[x][y] = True
@@ -32,9 +32,10 @@ while True :
     cnt = 0
     w, h = map(int, input().split())
     map_ = []
+
     for i in range(h):
         map_.append(list(map(int, input().split())))
-    # pprint(map_)
+    #pprint(map_)
 
     visited = [[False] * w for _ in range(h)]
 
