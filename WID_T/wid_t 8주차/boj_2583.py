@@ -48,7 +48,6 @@ for i in range(M):
             list_area.append(bfs(i,j))
             cnt += 1
 
-
 list_area.sort()
 print(cnt)
 for i in list_area:

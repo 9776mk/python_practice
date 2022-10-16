@@ -36,15 +36,18 @@ for _ in range(n):
 min_ = min(map(min, list_))
 max_ = max(map(max, list_))
 
-for i in range(min_, max_):
-    cnt = 0
-    visited = [[False] * n for _ in range(n)]
-    for j in range(n):
-        for k in range(n):
-            # 해당 좌표가 i보다 크고, 방문하지 않았다면
-            if list_[j][k] > i and visited[j][k] == False:
-                bfs(j,k,i)
-                cnt += 1
-    list_safe.append(cnt)
-
-print(max(list_safe))
+#
+if min_ == max_:
+    print(1)
+else:    
+    for i in range(min_, max_):
+        cnt = 0
+        visited = [[False] * n for _ in range(n)]
+        for j in range(n):
+            for k in range(n):
+                # 해당 좌표가 i보다 크고, 방문하지 않았다면
+                if list_[j][k] > i and visited[j][k] == False:
+                    bfs(j,k,i)
+                    cnt += 1
+        list_safe.append(cnt)
+    print(max(list_safe))
