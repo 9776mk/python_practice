@@ -4,3 +4,4 @@ for tc in range(10):
     sentence = input()
 
     print(f'#{n} {sentence.count(word)}')
+
